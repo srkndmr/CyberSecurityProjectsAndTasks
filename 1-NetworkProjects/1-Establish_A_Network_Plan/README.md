@@ -1,1 +1,119 @@
 
+## Project Overview
+This project involves the design and simulation of a secure, efficient, and cost-effective network for a client relocating to a new office. The network setup must accommodate the client’s current and future needs while adhering to security best practices and ensuring robust performance. The entire network design is simulated using **Cisco Packet Tracer** for visualization and testing purposes.
+
+---
+
+### Project Goals:
+1. **Secure and Efficient Network Design**: Develop a network infrastructure that supports multiple sectors while optimizing security and performance.
+2. **Resource Optimization**: Allocate IP addresses, VLANs, and network devices to ensure scalability and manageability.
+3. **Security Focus**: Implement security measures such as VLANs, ACLs, RADIUS authentication, and centralized services to mitigate risks.
+4. **Cost-Effectiveness**: Select network components and configurations to ensure a budget-conscious design.
+
+---
+
+## Network Design and Structure
+
+### **Network Sectors:**
+The network is divided into four sectors, each with specific IP addressing, VLAN configurations, and security measures. Each sector has been designed to allow future scalability.
+
+- **Management (VLAN 10)**: 5 workstations  
+- **Study (VLAN 20)**: 8 workstations  
+- **Production (VLAN 30)**: 10 workstations  
+- **Support (VLAN 40 & 50)**: 10 workstations in each support sector  
+
+#### **Switches and VLANs:**
+- **Switch4** connects to all sector switches (VLANs 10, 20, 30, 40, 41) and handles the pathway for VLAN 50 (server VLAN). 
+- **Switch7** is used for connecting the DNS and DHCP with VLAN 50 configured in access mode.
+
+### **IP Addressing Scheme:**
+| VLAN   | Sector            | IP Range           | Subnet Mask       | Default Gateway  |
+|--------|-------------------|--------------------|-------------------|------------------|
+| VLAN 10| Management         | 192.168.10.0/24    | 255.255.255.0     | 192.168.10.1      |
+| VLAN 20| Study              | 192.168.20.0/24    | 255.255.255.0     | 192.168.20.1      |
+| VLAN 30| Production         | 192.168.30.0/24    | 255.255.255.0     | 192.168.30.1      |
+| VLAN 40| Support 1          | 192.168.40.0/24    | 255.255.255.0     | 192.168.40.1      |
+| VLAN 41| Support 2          | 192.168.41.0/24    | 255.255.255.0     | 192.168.41.1      |
+| VLAN 50| Servers (DNS, DHCP)| 192.168.50.0/24    | 255.255.255.0     | 192.168.50.1    |
+
+---
+
+## Security Design
+
+### **VLANs and ACLs:**
+- Each sector is isolated using **VLANs** for security, minimizing the risk of unauthorized access.
+- **Access Control Lists (ACLs)** are implemented to restrict access between VLANs and protect sensitive areas of the network (e.g., servers in VLAN 50).
+- **DMZ** concept: VLAN 50 serves as the DMZ zone, housing critical services such as DNS and DHCP
+
+### **RADIUS Authentication:**
+To enhance security, we have configured **RADIUS** for centralized authentication. This reduces the risk of password compromise and enables centralized user management.
+
+### **Firewall and Router Configurations:**
+While Cisco Packet Tracer has limitations with full firewall simulation, a layered approach has been implemented using:
+- A firewall simulation between **Router0** and **Router1**.
+- Security policies are enforced on routers to prevent unauthorized traffic from accessing sensitive sectors.
+
+---
+
+## Device Configuration Details
+
+### **Switches:**
+- Switch4: Responsible for routing traffic between all VLANs and connects to Router0.
+- Switch7: Connected to DNS, DHCP, and FTP servers. Configured for VLAN 50.
+
+### **Routers:**
+- **Router1**: Default gateway for all VLANs, handling inter-VLAN routing.
+  - IP: 192.168.10.1 (default gateway)
+- **Router2**: Handles external traffic, connected to the cloud via GigabitEthernet1/1.
+  - IP: 203.0.113.2
+
+---
+
+## DHCP and DNS Configuration
+
+### **DHCP Server:**
+- **Pool Name**: Management
+- **Start IP Address**: 192.168.10.10 (for VLAN 10)
+- **Subnet Mask**: 255.255.255.0
+- **Default Gateway**: 192.168.10.1
+- **DNS Server**: 192.168.50.48
+- Each VLAN has its own DHCP pool configured, with the correct IP range and default gateway specified.
+
+### **DNS Server:**
+- **DNS IP**: 192.168.50.48
+- **Default Gateway for DNS server**: 0.0.0.0
+- **DNS Service**: Enabled under the "Services" tab.
+  - Resource records are configured to map domain names to IP addresses, such as:
+    - `www.company.local` → `192.168.50.48`
+
+---
+
+## Testing Procedures
+
+### **Testing DHCP:**
+1. Ensure all PCs are set to **DHCP mode**.
+2. Verify that each PC in VLANs 10, 20, 30, 40, and 41 receives an IP address from the correct DHCP pool.
+3. Test connectivity by pinging the default gateway and DNS server from different VLANs.
+
+### **Testing DNS:**
+1. Verify that the DNS server is reachable from all VLANs by pinging `192.168.50.48`.
+2. Test name resolution by pinging domain names (e.g., `ping www.company.local`).
+3. Confirm that the correct IP addresses are resolved for each domain.
+
+---
+
+## Cost Breakdown
+| Item                | Quantity | Cost per Unit    | Total Cost        |
+|---------------------|----------|------------------|-------------------|
+| Cisco Routers       | 2        | €1,200 – €1,800  | €2,400 – €3,600   |
+| Cisco Switches      | 7        | €1,000 – €1,500  | €7,000 – €10,500  |
+| Firewalls           | 1        | €1,500 – €3,000  | €1,500 – €3,000   |
+| Workstations        | 33       | €600 – €800      | €19,800 – €26,400 |
+| **Total Estimate**  |          |                  | **€30,700 – €43,500** |
+
+ |
+
+---
+
+## Conclusion
+This project demonstrates a secure, scalable, and cost-effective network designed to meet the client's current needs and future growth. The network architecture prioritizes security through VLAN segmentation, ACLs, and RADIUS authentication while ensuring high performance and manageability. Comprehensive documentation, including the network simulation and configuration files, supports future maintainability and scalability.
