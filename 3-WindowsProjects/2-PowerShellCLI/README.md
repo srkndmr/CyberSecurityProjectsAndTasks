@@ -17,6 +17,10 @@
 ### Basic Help Command
 To get a brief description of the `Get-Process` command:
 ```powershell
+
+powershell
+Copy code
+
 Get-Help Get-Process
 Detailed Information
 For more detailed information:
