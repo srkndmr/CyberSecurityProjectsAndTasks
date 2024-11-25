@@ -23,12 +23,12 @@ Copy code
 
 Get-Help Get-Process
 Detailed Information
-For more detailed information:
+For more detailed information:'''
 
-powershell
+'''powershell
 Copy code
 
-Get-Help Get-Process -Detailed
+Get-Help Get-Process -Detailed'''
 Examples
 To see usage examples:
 
