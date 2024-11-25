@@ -1,4 +1,3 @@
-
 # PowerShell Commands and Usage Guide
 
 ## Table of Contents
@@ -20,21 +19,21 @@ To get a brief description of the `Get-Process` command:
 ```powershell
 Get-Help Get-Process
 Detailed Information
-For more detailed information:
+For more detailed information: 
 
-powershell
+'''powershell
 Copy code
 Get-Help Get-Process -Detailed
 Examples
 To see usage examples:
 
-powershell
+'''powershell
 Copy code
 Get-Help Get-Process -Examples
 Complete Information
 To view all technical details:
 
-powershell
+'''powershell
 Copy code
 Get-Help Get-Process -Full
 Updating Help
@@ -49,12 +48,13 @@ The Get-Process cmdlet lists all running processes on your system. Key uses incl
 Viewing currently running applications or services.
 Inspecting specific processes (e.g., memory usage, process ID).
 Examples:
-
 List all processes:
+
 powershell
 Copy code
 Get-Process
 Inspect a specific process (e.g., Notepad):
+
 powershell
 Copy code
 Get-Process notepad
@@ -75,10 +75,12 @@ Copy code
 Get-Command Get-Process
 Filter by Command Type
 Cmdlets:
+
 powershell
 Copy code
 Get-Command -CommandType Cmdlet
 Aliases:
+
 powershell
 Copy code
 Get-Command -CommandType Alias
@@ -107,10 +109,12 @@ Copy code
 ls
 Move to Directories
 Root:
+
 powershell
 Copy code
 Set-Location C:\
 Home:
+
 powershell
 Copy code
 Set-Location ~
@@ -144,13 +148,19 @@ Remove-Item -Recurse -Force story
 Managing Permissions
 Change File Owner
 Retrieve the ACL:
+
 powershell
 Copy code
 $acl = Get-Acl file1.txt
 Set the owner:
+
 powershell
 Copy code
 $acl.SetOwner([System.Security.Principal.NTAccount]"Administrator")
+Apply the updated ACL:
+
+powershell
+Copy code
 Set-Acl -Path file1.txt -AclObject $acl
 Package Management
 Manage Windows Updates
@@ -187,10 +197,11 @@ Copy code
 $env:test = "hello powershell"
 Modify PATH
 Add an executable to PATH:
+
 powershell
 Copy code
 $env:PATH += ";C:\Path\To\Executable"
-List Environment Variables
+List Environment Variables:
 powershell
 Copy code
 Get-ChildItem Env:
