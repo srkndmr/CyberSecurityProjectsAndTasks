@@ -19,27 +19,27 @@ To get a brief description of the `Get-Process` command:
 ```powershell
 Get-Help Get-Process
 Detailed Information
-For more detailed information: 
+For more detailed information:
 
-'''powershell
+```powershell
 Copy code
 Get-Help Get-Process -Detailed
 Examples
 To see usage examples:
 
-'''powershell
+```powershell
 Copy code
 Get-Help Get-Process -Examples
 Complete Information
 To view all technical details:
 
-'''powershell
+```powershell
 Copy code
 Get-Help Get-Process -Full
 Updating Help
 If help files are outdated or missing:
 
-powershell
+```powershell
 Copy code
 Update-Help
 What is Get-Process?
@@ -50,12 +50,12 @@ Inspecting specific processes (e.g., memory usage, process ID).
 Examples:
 List all processes:
 
-powershell
+```powershell
 Copy code
 Get-Process
 Inspect a specific process (e.g., Notepad):
 
-powershell
+```powershell
 Copy code
 Get-Process notepad
 Access Online Help
