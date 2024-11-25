@@ -23,6 +23,7 @@ For more detailed information:
 
 powershell
 Copy code
+
 Get-Help Get-Process -Detailed
 Examples
 To see usage examples:
