@@ -7,7 +7,7 @@ Welcome to the **PowerShell Commands and Usage Guide**! 🎉 This guide is desig
 ---
 
 
-## Table of Contents
+## Table of Contents 
 - [Get-Help](#get-help)
 - [What is Get-Process?](#what-is-get-process)
 - [Key Uses of Get-Command](#key-uses-of-get-command)
