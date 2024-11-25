@@ -2,7 +2,7 @@
 
 Welcome to the **PowerShell Commands and Usage Guide**! 🎉 This guide is designed to help you get started with PowerShell, a powerful command-line tool and scripting language for Windows. Whether you're managing files, automating tasks, or configuring systems, this guide covers essential commands with clear examples. 🚀  
 
-Feel free to explore, copy commands, and make the most out of your PowerShell experience! 💻 Happy scripting! 😊  
+💻 Happy scripting! 😊  
 
 ---
 
