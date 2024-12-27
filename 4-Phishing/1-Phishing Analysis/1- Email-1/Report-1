@@ -10,14 +10,11 @@ Email Analysis Report
 5. What brand was this email tailored to impersonate?
 * The email was tailored to impersonate "PayPal."
 6. What is the originating IP? Defang the IP address.
-* The originating IP is 66.211.170.87.
-* Defanged: [66.211.170.87]
+* The originating IP is  66[.]211[.]170[.]87
 7. What do you think will be a domain of interest? Defang the domain.
-* The domain of interest is "paypal.be."
-* Defanged: paypal[.]be
+* The domain of interest is: paypal[.]be
 8. What is the shortened URL? Defang the URL.
-* The shortened URL is https://www.paypal.com/cgp/app-redirect?intent=xo_email_txn_details&src=RT000016_cta&ref_id=2T886045U28581329.
-* Defanged: https://www[.]paypal[.]com/cgp/app-redirect?intent=xo_email_txn_details&src=RT000016_cta&ref_id=2T886045U28581329
+* The shortened URL is: https://www[.]paypal[.]com/cgp/app-redirect?intent=xo_email_txn_details&src=RT000016_cta&ref_id=2T886045U28581329
 9. Do you think this is a phishing email?
 * Based on the provided SPF, DKIM, and DMARC analyses, this email appears legitimate. 
 However, the presence of a shortened URL and impersonation of "PayPal" warrants additional caution.
@@ -53,3 +50,12 @@ DMARC (Domain-based Message Authentication, Reporting & Conformance):
 * Explanation: DMARC builds on SPF and DKIM to provide instructions to receiving mail servers on handling failed 
 authentication. It also enables domain owners to receive reports about email authentication activity to prevent 
 misuse of their domain.
+Indicators of Legitimacy:
+SPF Pass: The sender's IP address is authorized by the paypal.be domain, indicating alignment with the domain's SPF record.
+DKIM Signing Domain: The DKIM signature claims to be from paypal.be, although the verification result was neutral.
+DMARC Pass: The email aligns with both SPF and DKIM policies, which are validated by the DMARC record for paypal.be.
+Suspicious Indicators:
+Presence of a Shortened URL: Shortened or complex URLs, even from legitimate sources, can be used in phishing emails to obscure malicious links.
+Impersonation of PayPal: Phishing emails often impersonate reputable brands like PayPal to gain trust.
+Neutral DKIM Verification: Although the DKIM signature exists, the "neutral"
+
