@@ -1,44 +1,59 @@
+# 🕵️‍♂️ Phishing Analysis Challenge: SOC-it to 'Em!
 
-🕵️‍♂️ Phishing Analysis Challenge: SOC-it to 'Em!
-🕒 The Setup
-You’re a fearless SOC analyst, armed with curiosity, caffeine, and a handful of sketchy .eml files from your “helpful” colleagues. Your mission? Sort out the real emails from the phishing ones before Karen in HR sends her life savings to a Nigerian prince. 📨
+## 🕒 The Setup  
+You’re a SOC analyst, tasked with analyzing suspicious `.eml` files sent by your colleagues. Your mission is to identify phishing emails, answer key questions, and write a report with screenshots of your analysis tools.
 
-🎯 Challenge Details
-Type: Learning (because mistakes happen, but let’s try not to.)
-Duration: 2 Days (or 5 if procrastination strikes.)
-Team Challenge: Solo (because teamwork makes the dream work...unless it’s phishing.)
+---
 
-Your Mission:
-Analyze 5 emails, identify phishing attempts, and write a report with screenshots. Save the company, become the office hero, and maybe even earn a free coffee.
+## 🎯 Challenge Details  
+**Type:** Learning  
+**Duration:** 2 Days  
+**Team Challenge:** Solo  
 
-🔍 Key Questions to Answer:
-What’s the email timestamp? (Was the scammer working overtime?)
-Who sent it? (Is "Bill from IT Support" even real?)
-What’s their email address? (spoofed.email@definitelynotlegit.com?)
-Where do replies go? (The prince’s offshore account?)
-What brand are they impersonating? (Hope it’s not one you shop at!)
-What’s the originating IP? (Defang it, or it might bite.)
-Suspicious domain? (Defang that too – safety first!)
-What’s the shortened URL? (Not all tiny URLs are cute.)
-Phishing email? (Spoiler alert: Probably yes.)
-🛠️ Tools to Save the Day
-VirusTotal: Because you definitely shouldn’t click that link.
-PhishTools: CSI for phishing – just add drama music. 🎶
-MX Lookup: Sniff out sketchy mail servers.
-PhishTank: The phishing rogues' gallery.
-Spamhaus: Where shady IPs go to get shamed.
-🚨 Action Plan:
-Open Emails Like a Pro: Use Thunderbird or a text editor (bonus points for dramatic flair).
-Decode the Chaos: Inspect headers, links, and sender info like Sherlock Holmes on caffeine.
-Run the Tools: Let VirusTotal and friends do the heavy lifting.
-Take Screenshots: Pics or it didn’t happen.
-Write the Report: Be detailed, be witty, and make Karen proud.
-📚 Training Montage
-Before diving in, level up with these TryHackMe rooms:
+### Mission:  
+Analyze 5 emails, determine if they are phishing attempts, and document your findings.
 
-Phishing Emails 1
-Phishing Emails 2
-💡 Pro Tip
-Phishing emails are like bad exes – they’re manipulative, fake, and should never be trusted. 🛑
+---
 
-Now go SOC-it to 'em! 🎉
+## 🔍 Key Questions to Answer:  
+1. What is the email's timestamp?  
+2. Who is the email from?  
+3. What is the sender's email address?  
+4. What email address will receive a reply?  
+5. What brand is being impersonated?  
+6. What is the originating IP? (Defanged)  
+7. What domain appears suspicious? (Defanged)  
+8. What is the shortened URL? (Defanged)  
+9. Is this a phishing email?
+
+---
+
+## 🛠️ Tools for Analysis  
+- **VirusTotal**: Scan URLs and attachments for malicious content.  
+- **PhishTools**: Perform metadata and link analysis.  
+- **MX Lookup**: Verify sender domains and mail servers.  
+- **PhishTank**: Check for known phishing URLs.  
+- **Spamhaus**: Investigate blacklisted IPs and domains.  
+
+---
+
+## 🚨 Action Plan  
+1. Open `.eml` files using an email client or text editor.  
+2. Analyze email headers to identify sender, recipient, and other metadata.  
+3. Inspect email content for suspicious links, attachments, or requests.  
+4. Use VirusTotal, PhishTank, and Spamhaus to investigate links, domains, and IPs.  
+5. Capture screenshots of tools and findings.  
+6. Write a detailed report with your observations.
+
+---
+
+## 📚 Resources  
+Complete these TryHackMe rooms for training:  
+- [Phishing Emails 1](https://tryhackme.com/room/phishingemails1tryoe)  
+- [Phishing Emails 2](https://tryhackme.com/room/phishingemails2rytmuv)  
+
+---
+
+## 💡 Reminder  
+Use the NIST Incident Response process:  
+**Prepare > Detect > Analyze > Contain > Eradicate > Recover > Post-Incident Handling**
