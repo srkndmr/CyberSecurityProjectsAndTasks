@@ -36,7 +36,7 @@ DKIM (DomainKeys Identified Mail):
 * Result: Neutral
 * Verification(s): 1 Signature - 1 NEUTRAL
 * Selector: pp-dkim1._domainkey.paypal.be (Signature 1 of 1)
-* Signing domain: paypal.be
+* Signing domain: paypal.be 
 * Algorithm: rsa-sha256
 * Verification: NEUTRAL
 * Explanation: DKIM adds a digital signature to an email, ensuring the message has not been altered in transit. 
