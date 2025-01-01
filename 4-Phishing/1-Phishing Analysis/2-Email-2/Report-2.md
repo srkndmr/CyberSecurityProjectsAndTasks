@@ -30,7 +30,7 @@ This report analyzes an email for authenticity and phishing indicators, answerin
 
 ---
 **Analysis:**  
-Yes, this email is likely a phishing attempt. The sender impersonates Trust Wallet, a legitimate brand, and includes a suspicious shortened URL (hxxps://climovil[.]com) that directs users to a potentially malicious site. Hybrid Analysis marked the URL as "suspicious" with a threat score of 50/100.
+This email is likely a phishing attempt. The sender impersonates Trust Wallet, a legitimate brand, and includes a suspicious shortened URL (hxxps://climovil[.]com) that directs users to a potentially malicious site. Hybrid Analysis marked the URL as "suspicious" with a threat score of 50/100.
 
 ---
 
