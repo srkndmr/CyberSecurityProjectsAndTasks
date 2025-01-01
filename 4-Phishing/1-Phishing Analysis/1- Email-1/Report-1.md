@@ -1,24 +1,13 @@
 Email Analysis Report
-1. What is the email's timestamp?
 * The email's timestamp is Mon, 20 Mar 2023 15:57:04 +0000.
-2. Who is the email from?
 * The email is from "service@paypal.be."
-3. What is his email address?
 * The sender's email address is service@paypal.be.
-4. What email address will receive a reply to this email?
 * The reply-to address is service@paypal.be.
-5. What brand was this email tailored to impersonate?
-* The email was tailored to impersonate "PayPal."
-6. What is the originating IP? Defang the IP address.
 * The originating IP is  66[.]211[.]170[.]87
-7. What do you think will be a domain of interest? Defang the domain.
-* The domain of interest is: paypal[.]be
-8. What is the shortened URL? Defang the URL.
-* The shortened URL is: https://www[.]paypal[.]com/cgp/app-redirect?intent=xo_email_txn_details&src=RT000016_cta&ref_id=2T886045U28581329
-9. Do you think this is a phishing email?
+* The domain is: paypal[.]be
+* There is no shortened URL. URL is: https://www[.]paypal[.]com/cgp/app-redirect?intent=xo_email_txn_details&src=RT000016_cta&ref_id=2T886045U28581329
 * Based on the provided SPF, DKIM, and DMARC analyses, this email appears legitimate. 
-However, the presence of a shortened URL and impersonation of "PayPal" warrants additional caution.
-Verifying the URL before clicking is strongly recommended.
+The domain and IP address have been thoroughly checked multiple times using various OSINT tools, including VirusTotal, AbuseIPDB, ANY.RUN, and Hybrid Analysis. All results indicate they are clean, and the email is deemed benign. Screenshots of the results from these OSINT tools have been taken and included for reference.
 
 Technical Analysis
 SPF (Sender Policy Framework):
