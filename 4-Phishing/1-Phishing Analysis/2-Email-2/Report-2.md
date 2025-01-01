@@ -60,6 +60,7 @@ The email appears to be a phishing attempt due to the following:
 **Recommendation:**  
 Do not click on the provided link or engage with the sender. Report this email to the appropriate security team for further investigation.
 <img width="1433" alt="Screenshot 2025-01-02 at 00 43 02" src="https://github.com/user-attachments/assets/4fbec2af-63f5-4a2c-b0a4-f6e4a5c27660" />
+<img width="1422" alt="Screenshot 2025-01-02 at 00 56 45" src="https://github.com/user-attachments/assets/9314a835-f83f-441e-8439-df95f28af367" />
 <img width="1437" alt="Screenshot 2025-01-02 at 00 40 09" src="https://github.com/user-attachments/assets/f5285cbe-6f15-4daa-8987-a5520491c26f" />
 <img width="1141" alt="Screenshot 2025-01-02 at 00 26 41" src="https://github.com/user-attachments/assets/122dd00d-70d3-4163-8b7f-d3a2e8fc8791" />
 <img width="1418" alt="Screenshot 2025-01-02 at 00 24 29" src="https://github.com/user-attachments/assets/c132e667-3fde-49dd-a108-c79b822021ba" />
