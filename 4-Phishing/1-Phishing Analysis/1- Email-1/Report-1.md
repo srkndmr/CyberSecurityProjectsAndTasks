@@ -1,4 +1,4 @@
-<img width="1440" alt="Screenshot 2025-01-02 at 00 15 04" src="https://github.com/user-attachments/assets/c92e9301-463f-419d-8132-e842b390c97b" />Email Analysis Report
+Email Analysis Report
 * The email's timestamp is Mon, 20 Mar 2023 15:57:04 +0000.
 * The email is from "service@paypal.be."
 * The sender's email address is service@paypal.be.
@@ -48,10 +48,11 @@ Presence of a Shortened URL: Shortened or complex URLs, even from legitimate sou
 Impersonation of PayPal: Phishing emails often impersonate reputable brands like PayPal to gain trust.
 Neutral DKIM Verification: Although the DKIM signature exists, the "neutral"
 
-<img width="1440" alt="Screenshot 2025-01-02 at 00 15 04" src="https://github.com/user-attachments/assets/ccb6c9f2-0664-4b69-a9c6-dac7808aeb8f" />
-<img width="1438" alt="Screenshot 2025-01-02 at 00 14 53" src="https://github.com/user-attachments/assets/d1cbd0c9-d09b-42c4-91ad-c1e11f8762ce" />
-<img width="1380" alt="Screenshot 2025-01-02 at 00 02 20" src="https://github.com/user-attachments/assets/f389c70d-95f4-4047-86ec-efbf2d1899fa" />
-<img width="1440" alt="Screenshot 2025-01-02 at 00 01 30" src="https://github.com/user-attachments/assets/7f858f3d-b389-4e60-8bda-3db24962c80f" />
-<img width="1431" alt="Screenshot 2025-01-02 at 00 00 38" src="https://github.com/user-attachments/assets/5f3d9b8e-3bef-46d6-b6c1-4bfe01e051d8" />
+<img width="1440" alt="Screenshot 2025-01-02 at 00 15 04" src="https://github.com/user-attachments/assets/c92e9301-463f-419d-8132-e842b390c97b" />  
+<img width="1440" alt="Screenshot 2025-01-02 at 00 15 04" src="https://github.com/user-attachments/assets/ccb6c9f2-0664-4b69-a9c6-dac7808aeb8f" />  
+<img width="1438" alt="Screenshot 2025-01-02 at 00 14 53" src="https://github.com/user-attachments/assets/d1cbd0c9-d09b-42c4-91ad-c1e11f8762ce" />  
+<img width="1380" alt="Screenshot 2025-01-02 at 00 02 20" src="https://github.com/user-attachments/assets/f389c70d-95f4-4047-86ec-efbf2d1899fa" />  
+<img width="1440" alt="Screenshot 2025-01-02 at 00 01 30" src="https://github.com/user-attachments/assets/7f858f3d-b389-4e60-8bda-3db24962c80f" />  
+<img width="1431" alt="Screenshot 2025-01-02 at 00 00 38" src="https://github.com/user-attachments/assets/5f3d9b8e-3bef-46d6-b6c1-4bfe01e051d8" />  
 <img width="1140" alt="Screenshot 2025-01-01 at 23 43 27" src="https://github.com/user-attachments/assets/9bcd93c4-b26f-45d6-99aa-dc7044f6dac8" />
 
