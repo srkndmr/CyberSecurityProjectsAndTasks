@@ -31,7 +31,7 @@
 ## VirusTotal Report
 - **VirusTotal Flag Count**: **7 / 96** reports indicate the domain is flagged as potentially dangerous.
 
-## Do you think this is a phishing website?
+## Thoughts
 - Yes, this website appears to be a **phishing website** based on the following observations:
   - The website promotes "100% free" services, which is a common tactic in phishing and scam operations.
   - The **language used in the site is informal and unprofessional**, which is often a red flag for phishing attempts.
