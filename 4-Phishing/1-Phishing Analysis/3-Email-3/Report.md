@@ -38,7 +38,7 @@
   - blog[.]tulingxueyuan[.]cn
 
 - **Shortened URL:**
-  - http://blog.tulingxueyuan.cn/contradictedqm.php?utm_campaign=tpdjuresn
+  - http://blog[.]tulingxueyuan[.]cn/contradictedqm[.]php?utm_campaign=tpdjuresn
 
 - **Defanged URL:**
   - http://blog[.]tulingxueyuan[.]cn/contradictedqm[.]php?utm_campaign=tpdjuresn
@@ -69,7 +69,7 @@ This email is identified as a **phishing attempt** based on the following reason
 This email is highly suspicious and is categorized as a **phishing email**. It is recommended to:
 
 - Avoid clicking on any links provided in the email.
-- Report the email to your organization's security team or email provider.
+- Report the email to the organization.
 - Educate users about recognizing phishing attempts to prevent potential breaches.
 ![Screenshot 2025-01-02 at 13 17 21](https://github.com/user-attachments/assets/83767de3-0b06-4e3b-85e1-ef5efe188d7c)
 ![Screenshot 2025-01-02 at 13 17 48](https://github.com/user-attachments/assets/2145ee4b-cdf6-4970-b624-b560b7cff179)
