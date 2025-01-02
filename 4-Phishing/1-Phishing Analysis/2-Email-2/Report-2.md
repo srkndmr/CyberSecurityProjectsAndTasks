@@ -20,7 +20,8 @@ This report analyzes an email for authenticity and phishing indicators, answerin
 - **Impersonated Brand:** Trust Wallet  
 
 ---
-- **Originating IP (Defanged):** 172[.]81[.]119[.]154  
+- **Originating IP (Defanged):** 172[.]81[.]119[.]154
+- **Secondary IP (Defanged):** 85[.]209[.]134[.]107
 
 ---
 - **Domain of Interest (Defanged):** midnightmagicevents[.]com  
@@ -59,7 +60,7 @@ The email appears to be a phishing attempt due to the following:
 
 **Recommendation:**  
 Do not click on the provided link or engage with the sender. Report this email to the appropriate security team for further investigation.
-![VirusTotal Result] <img width="1433" alt="Screenshot 2025-01-02 at 00 43 02" src="https://github.com/user-attachments/assets/4fbec2af-63f5-4a2c-b0a4-f6e4a5c27660" />
+<img width="1433" alt="Screenshot 2025-01-02 at 00 43 02" src="https://github.com/user-attachments/assets/4fbec2af-63f5-4a2c-b0a4-f6e4a5c27660" />
 <img width="1434" alt="Screenshot 2025-01-02 at 10 23 28" src="https://github.com/user-attachments/assets/5d3d9e51-b93b-4387-b782-838f50480e69" />
 <img width="1422" alt="Screenshot 2025-01-02 at 00 56 45" src="https://github.com/user-attachments/assets/9314a835-f83f-441e-8439-df95f28af367" />
 <img width="1437" alt="Screenshot 2025-01-02 at 00 40 09" src="https://github.com/user-attachments/assets/f5285cbe-6f15-4daa-8987-a5520491c26f" />
