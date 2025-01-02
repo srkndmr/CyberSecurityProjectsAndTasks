@@ -4,28 +4,22 @@
 ## Email's Timestamp
 - The timestamp is not provided in the email body. Please refer to the email headers for the exact timestamp.
 
-## Who is the email from?
+## Email from
 - The email is from **Dan Miller**, the United Nations Special Representative for Disaster Risk Reduction (UNDRR).
 
-## What is his email address?
-- The sender's email address is not explicitly listed in the body, but it appears to be **gmail.com**, which could indicate a spoofed address.
-
-## What email address will receive a reply to this email?
+## Reply to 
 - The reply-to email address is **mrroberttaiwo212@gmail.com**.
 
-## What brand was this email tailored to impersonate?
+## The brand Impersonated
 - This email is tailored to impersonate the **United Nations (UN)**.
 
-## What is the originating IP? Defang the IP address.
-- The originating IP address is **209.85.220.41**. Defanged: **209[.]85[.]220[.]41**.
-
-## What do you think will be a domain of interest? Defang the domain.
-- The email is likely trying to impersonate **gmail.com**. Defanged: **gmail[.]com**.
+## Originating IP
+- The originating IP **209[.]85[.]220[.]41**.
 
 ## What is the shortened URL? Defang the URL.
 - There is no shortened URL present in this email. If one were present, it would need to be examined for any malicious intent.
 
-## Do you think this is a phishing email?
+## Thoughts?
 - Yes, this email appears to be a **phishing email**. Here are the key indicators:
   - The email claims to offer a large sum of money ($1,500,000 USD) in return for **personal information**, a typical tactic used in phishing schemes.
   - It asks the recipient to reply to a Gmail address (**mrroberttaiwo212@gmail.com**), which is unprofessional and often associated with fraudulent activities.
