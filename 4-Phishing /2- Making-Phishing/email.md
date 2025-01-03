@@ -1,6 +1,6 @@
 # Subject: 🐾 Don’t Miss Out, Bob! Bull Terrier Giveaway Ends Soon! 🐾
 
-## Body: 
+## Body:  
 
 Hi Bob,
 
