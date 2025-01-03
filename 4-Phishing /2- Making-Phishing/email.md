@@ -11,7 +11,7 @@ We’ve partnered with [DoggieLux](https://your-ngrok-link.com) to offer a limit
 - A $100 gift card for pet supplies 🛍️
 
 Click below to register for this exciting giveaway:
-👉 **[Register Now!]([https://your-ngrok-link.com](https://webhook.site/d87402e2-c76c-456a-9f5c-96a6c242d86f)** 👈
+👉 **[Register Now!](https://webhook.site/d87402e2-c76c-456a-9f5c-96a6c242d86f)** 👈
 
 But hurry! Entries close in 48 hours.
 
