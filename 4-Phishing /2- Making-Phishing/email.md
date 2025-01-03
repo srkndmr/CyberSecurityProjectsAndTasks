@@ -11,7 +11,7 @@ We’ve partnered with [DoggieLux](https://www.doggieluxe.com/) to offer a limit
 - A $100 gift card for pet supplies 🛍️
 
 Click below to register for this exciting giveaway:
-👉 **[Register Now!](http://localhost:8080)** 👈
+👉 **[Register Now!](https://9ae4-91-178-64-150.ngrok-free.app)** 👈
 
 But hurry! Entries close in 48 hours.
 
