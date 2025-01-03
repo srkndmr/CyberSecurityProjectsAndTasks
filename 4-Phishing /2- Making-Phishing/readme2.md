@@ -238,6 +238,7 @@ The frontend is styled to appear professional and convincing.
 ### **5. Credentials File:**
 ![Credentials Screenshot](./images/credentials_file_screenshot.png)
 
+
 ---
 
 ## **How to Protect Yourself from Phishing** 🛡️
