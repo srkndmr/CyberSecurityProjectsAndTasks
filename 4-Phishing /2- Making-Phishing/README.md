@@ -13,7 +13,7 @@ This project is a hilarious take on creating a simulated phishing website for ed
 - **Visual Studio Code:** The trusty text editor that didn't crash (much) during this project.
 
 ### **2. Websites Referenced:**
-- **DoggieLux Website (https://www.doggieluxe.com/):** For that authentic "we're totally not scamming you" vibe.
+- **DoggieLux Website (https://www.doggielux*.com/):** For that authentic "we're totally not scamming you" vibe.
 
 ### **3. File Hosting:**
 - **Local Environment:** Because the internet can't handle how cool our files are.
