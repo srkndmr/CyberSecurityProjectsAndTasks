@@ -13,6 +13,7 @@ This project showcases a creative and educational approach to simulating phishin
   - [Designing the Phishing Email ✉️](#step-2-designing-the-phishing-email-️)
   - [Building the Phishing Website 🌐](#step-3-building-the-phishing-website-)
   - [Testing with Ngrok 🚀](#step-4-testing-with-ngrok-)
+- [How to Protect Yourself from Phishing 🛡️](#how-to-protect-yourself-from-phishing-️)
 - [Outcome 🎯](#outcome-)
 - [Disclaimer ⚠️](#disclaimer-️)
 
@@ -162,6 +163,25 @@ The frontend is styled to appear professional and convincing.
    ngrok http 5000
    ```
 2. Use the generated Ngrok URL (e.g., `https://3fd6-91-178-64-150.ngrok-free.app`) to access the website externally.
+
+---
+
+## **How to Protect Yourself from Phishing** 🛡️
+
+### **1. Recognizing Phishing Attempts:**
+- **Check the Sender:** Always verify email senders. Suspicious domains like `support@micr0soft.com` are red flags.
+- **Hover Before Clicking:** Hover over links to see where they lead. Avoid clicking on unverified URLs.
+- **Look for HTTPS:** Ensure the website has a secure connection (padlock icon in the address bar).
+
+### **2. Preventative Measures:**
+- **Enable Multi-Factor Authentication (MFA):** Even if your credentials are stolen, MFA adds an extra security layer.
+- **Keep Software Updated:** Regular updates prevent vulnerabilities that attackers exploit.
+- **Educate Yourself:** Learn about common phishing tactics through training and awareness.
+
+### **3. Responding to Phishing:**
+- **Don’t Interact:** Avoid replying or clicking on suspicious emails.
+- **Report Phishing Attempts:** Forward phishing emails to your email provider or report to anti-phishing organizations.
+- **Change Compromised Passwords:** If you suspect an attack, update passwords immediately.
 
 ---
 
