@@ -14,6 +14,7 @@ This project showcases a creative and educational approach to simulating phishin
   - [Building the Phishing Website 🌐](#step-3-building-the-phishing-website-)
   - [Testing with Ngrok 🚀](#step-4-testing-with-ngrok-)
   - [How to Run the Project 🖥️](#how-to-run-the-project-)
+- [Screenshots 📸](#screenshots-)
 - [How to Protect Yourself from Phishing 🛡️](#how-to-protect-yourself-from-phishing-️)
 - [Outcome 🎯](#outcome-)
 - [Disclaimer ⚠️](#disclaimer-️)
@@ -28,7 +29,7 @@ This project showcases a creative and educational approach to simulating phishin
 - **Visual Studio Code:** Our go-to editor for crafting the code.
 
 ### **2. Websites Referenced:**
-- **DoggieLux Website (https://www.doggielux*.com/):** Inspiration for the giveaway theme and email design.
+- **DoggieLux Website (https://www.doggieluxe.com/):** Inspiration for the giveaway theme and email design.
 
 ### **3. File Hosting:**
 - **Local Environment:** Static files like HTML, CSS, and images were hosted locally using Flask.
@@ -61,7 +62,7 @@ Subject: 🐾 Don’t Miss Out, Bob! Bull Terrier Giveaway Ends Soon! 🐾
 Body:
 Hi Bob,
 
-We know how much you adore bull terriers—so we’ve teamed up with [DoggieLux](https://www.doggielux*.com/) to bring you something special!
+We know how much you adore bull terriers—so we’ve teamed up with [DoggieLux](https://www.doggieluxe.com/) to bring you something special!
 
 🎉 **Exclusive Giveaway for Bull Terrier Lovers** 🎉
 
@@ -70,7 +71,7 @@ Enter now for a chance to win one of these amazing prizes:
 - 🐕 **Custom Merchandise Featuring Your Dog's Name**
 - 🛍️ **A $100 Gift Card for Pet Supplies**
 
-**[Click Here to Enter the Giveaway Now!](https://abc123.ngrok-free.app)**
+**[Click Here to Enter the Giveaway Now!](https://3fd6-91-178-64-150.ngrok-free.app)**
 
 🕓 **Hurry—Entries Close in 48 Hours!**
 
@@ -163,7 +164,7 @@ The frontend is styled to appear professional and convincing.
    ```bash
    ngrok http 5000
    ```
-2. Use the generated Ngrok URL (e.g., `https://abc123.ngrok-free.app`) to access the website externally.
+2. Use the generated Ngrok URL (e.g., `https://3fd6-91-178-64-150.ngrok-free.app`) to access the website externally.
 
 ---
 
@@ -217,6 +218,25 @@ The frontend is styled to appear professional and convincing.
    - To stop your application:
      1. Press `CTRL+C` in the terminal running `python3 app.py`.
      2. Close the terminal running **ngrok**.
+
+---
+
+## **Screenshots** 📸
+
+### **1. Phishing Email Design:**
+![Phishing Email Screenshot](./images/phishing_email_screenshot.png)
+
+### **2. Landing Page:**
+![Landing Page Screenshot](./images/landing_page_screenshot.png)
+
+### **3. Success Page:**
+![Success Page Screenshot](./images/success_page_screenshot.png)
+
+### **4. File Structure:**
+![File Structure Screenshot](./images/file_structure_screenshot.png)
+
+### **5. Credentials File:**
+![Credentials Screenshot](./images/credentials_file_screenshot.png)
 
 ---
 
