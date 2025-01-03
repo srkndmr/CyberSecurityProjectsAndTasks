@@ -5,7 +5,7 @@ Dear Bob,
 
 As a fellow bull terrier enthusiast, we know how much joy these incredible dogs bring into our lives. That’s why we’re excited to share an exclusive opportunity just for you!
 
-We’ve partnered with [DoggieLux](https://your-ngrok-link.com) to offer a limited-time giveaway for bull terrier lovers. Enter now for your chance to win:
+We’ve partnered with [DoggieLux](https://www.doggieluxe.com/) to offer a limited-time giveaway for bull terrier lovers. Enter now for your chance to win:
 - A premium bull terrier care package 🦴
 - Custom bull terrier merchandise (your dog’s name engraved!) 🐕
 - A $100 gift card for pet supplies 🛍️
