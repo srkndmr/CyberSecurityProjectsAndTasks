@@ -229,16 +229,24 @@ The frontend is styled to appear professional and convincing.
 ot.png)
 
 ### **2. Landing Page:**
-![Landing Page Screenshot](./images/landing_page_screenshot.png)
+![Landing Page Screenshot]
+![landing_page_screenshot](https://github.com/user-attachments/assets/25455409-9bed-4a47-a62f-d20b768cd1d0)
+
 
 ### **3. Success Page:**
-![Success Page Screenshot](./images/success_page_screenshot.png)
+![Success Page Screenshot]
+![success_page_screenshot](https://github.com/user-attachments/assets/52d8c080-f2e2-4e0a-8cb4-a9a02820be62)
+
 
 ### **4. File Structure:**
-![File Structure Screenshot](./images/file_structure_screenshot.png)
+![File Structure Screenshot]
+![file_structure_screenshot](https://github.com/user-attachments/assets/43f3eb80-85a6-41a6-8bf0-3f5a079ae575)
+
 
 ### **5. Credentials File:**
-![Credentials Screenshot](./images/credentials_file_screenshot.png)
+![Credentials Screenshot]
+![credentials_file_screenshot](https://github.com/user-attachments/assets/669858a9-71aa-4e68-a849-d53b5a08b848)
+
 
 
 ---
