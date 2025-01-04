@@ -242,7 +242,7 @@ ot.png)
 ![file_structure_screenshot](https://github.com/user-attachments/assets/43f3eb80-85a6-41a6-8bf0-3f5a079ae575)
 
 
-### **5. The Credential File Where the received credentials are saved**
+### **5. The Credentials File Where the received credentials are saved**
 ![credentials_file_screenshot](https://github.com/user-attachments/assets/aa94b38d-23e4-4179-b74e-cee99e665bbc)
 
 
