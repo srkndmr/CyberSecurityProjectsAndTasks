@@ -244,8 +244,8 @@ ot.png)
 
 
 ### **5. Credentials File Where the received credentials are saved**
-[Credentials Screenshot]
-(https://github.com/user-attachments/assets/669858a9-71aa-4e68-a849-d53b5a08b848)
+![credentials_file_screenshot](https://github.com/user-attachments/assets/aa94b38d-23e4-4179-b74e-cee99e665bbc)
+
 
 
 
