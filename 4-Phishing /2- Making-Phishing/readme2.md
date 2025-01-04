@@ -224,26 +224,25 @@ The frontend is styled to appear professional and convincing.
 ## **Screenshots** 📸
 
 ### **1. Phishing Email Design:**
-[Phishing Email Screenshot]
 <img width="925" alt="phishing_email_screenshot" src="https://github.com/user-attachments/assets/1dc7f84d-6a38-47dd-bdf6-47178ffc6667" />
 ot.png)
 
 ### **2. Landing Page:**
-[Landing Page Screenshot]
+
 ![landing_page_screenshot](https://github.com/user-attachments/assets/25455409-9bed-4a47-a62f-d20b768cd1d0)
 
 
 ### **3. Success Page:**
-[Success Page Screenshot]
+
 ![success_page_screenshot](https://github.com/user-attachments/assets/52d8c080-f2e2-4e0a-8cb4-a9a02820be62)
 
 
 ### **4. File Structure:**
-[File Structure Screenshot]
+
 ![file_structure_screenshot](https://github.com/user-attachments/assets/43f3eb80-85a6-41a6-8bf0-3f5a079ae575)
 
 
-### **5. Credentials File Where the received credentials are saved**
+### **5. The Credential File Where the received credentials are saved**
 ![credentials_file_screenshot](https://github.com/user-attachments/assets/aa94b38d-23e4-4179-b74e-cee99e665bbc)
 
 
