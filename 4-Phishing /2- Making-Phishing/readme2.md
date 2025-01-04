@@ -224,7 +224,9 @@ The frontend is styled to appear professional and convincing.
 ## **Screenshots** 📸
 
 ### **1. Phishing Email Design:**
-![Phishing Email Screenshot](./images/phishing_email_screenshot.png)
+![Phishing Email Screenshot]
+<img width="925" alt="phishing_email_screenshot" src="https://github.com/user-attachments/assets/1dc7f84d-6a38-47dd-bdf6-47178ffc6667" />
+ot.png)
 
 ### **2. Landing Page:**
 ![Landing Page Screenshot](./images/landing_page_screenshot.png)
