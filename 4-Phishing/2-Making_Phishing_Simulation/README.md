@@ -1,4 +1,3 @@
-
 # Phishing Website Simulation Project
 
 ## Overview 🐟
@@ -102,7 +101,7 @@ body {
 
 /* Container */
 .container {
-    max-width: 800px;
+    max-width: 700px;
     margin: auto;
     padding: 20px;
     background: rgba(255, 255, 255, 0.9);
@@ -128,7 +127,7 @@ header nav {
 
 header nav a {
     color: white;
-    font-size: 20px;
+    font-size: 22px;
     text-decoration: none;
     margin: 0 15px;
 }
