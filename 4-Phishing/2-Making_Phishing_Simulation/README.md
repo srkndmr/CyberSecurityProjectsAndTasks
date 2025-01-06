@@ -216,21 +216,18 @@ if __name__ == '__main__':
 
 ### **1. Landing Page:**
 
-![landing_page_screenshot](./LandingPage.png)
 <img width="1440" alt="LandingPage" src="https://github.com/user-attachments/assets/32303049-c00e-428d-a9ef-7f0485072a7a" />
 
-### **2. Success Page:**
+### **2. Success Login Page:**
 
-![success_page_screenshot](./Thank_youPage.png)
 <img width="1440" alt="Thank_youPage" src="https://github.com/user-attachments/assets/17def6ea-be2d-46b7-b80f-0a9fddf5e30e" />
 
 ### **3. File Structure:**
 
-![file_structure_screenshot](./Folder%20structure%20.png)
 <img width="908" alt="Folder structure " src="https://github.com/user-attachments/assets/f448b5ee-3f3b-45c8-aa66-4e564ac2d68f" />
 
 ### **4. The Credentials File Where the received credentials are saved**
-![credentials_file_screenshot](./credentials.jpg)
+
 <img width="943" alt="credentials" src="https://github.com/user-attachments/assets/4af56c41-f226-4a21-9d96-66e776aff1f5" />
 
 ---
