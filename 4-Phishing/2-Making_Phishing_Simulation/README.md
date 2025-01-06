@@ -8,6 +8,22 @@
 This project showcases a creative and educational approach to simulating a giveaway website. It’s designed to help cybersecurity enthusiasts learn the art of creating convincing simulations in a safe and controlled environment. Think of it as a "vintage-tastic" journey where we explore how these techniques work while keeping everything ethical and fun. This project is strictly for educational purposes, folks! 🎓
 
 ---
+
+## **📚 Table of Contents**
+- [Folder Structure 🗂️](#folder-structure-️)
+- [Overview 🚗](#overview)
+- [Tools and Technologies Used 🛠️](#tools-and-technologies-used-)
+- [Project Steps ⚙️](#project-steps-)
+  - [Setting Up the Environment ⚙️](#step-1-setting-up-the-environment-️)
+  - [Designing the Giveaway Website 🌐](#step-2-designing-the-giveaway-website-)
+  - [Testing with Ngrok 🚀](#step-3-testing-with-ngrok-)
+  - [How to Run the Project 🖥️](#how-to-run-the-project-)
+- [Screenshots 📸](#screenshots-)
+- [How to Protect Yourself from Similar Scams 🛡️](#how-to-protect-yourself-from-similar-scams-️)
+- [Outcome 🎯](#outcome-)
+- [Disclaimer ⚠️](#disclaimer-️)
+
+---
 ## **Folder Structure** 🗂️
 ```
 phishing_project/
@@ -25,21 +41,6 @@ phishing_project/
 │   ├── contact.html
 │   ├── about.html
 ```
----
-## **📚 Table of Contents**
-- [Folder Structure 🗂️](#folder-structure-️)
-- [Overview 🚗](#overview)
-- [Tools and Technologies Used 🛠️](#tools-and-technologies-used-)
-- [Project Steps ⚙️](#project-steps-)
-  - [Setting Up the Environment ⚙️](#step-1-setting-up-the-environment-️)
-  - [Designing the Giveaway Website 🌐](#step-2-designing-the-giveaway-website-)
-  - [Testing with Ngrok 🚀](#step-3-testing-with-ngrok-)
-  - [How to Run the Project 🖥️](#how-to-run-the-project-)
-- [Screenshots 📸](#screenshots-)
-- [How to Protect Yourself from Similar Scams 🛡️](#how-to-protect-yourself-from-similar-scams-️)
-- [Outcome 🎯](#outcome-)
-- [Disclaimer ⚠️](#disclaimer-️)
-
 ---
 
 ## **Tools and Technologies Used** 🛠️
