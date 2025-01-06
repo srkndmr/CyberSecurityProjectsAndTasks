@@ -184,11 +184,6 @@ if __name__ == '__main__':
    ```bash
    source myenv/bin/activate
    ```
-   If you’re on Windows, use:
-   ```cmd
-   myenv\Scripts\activate
-   ```
-
 5. **Install Required Dependencies** (First-time setup only)  
    If you haven’t already installed the required Python packages, run:
    ```bash
