@@ -1,17 +1,8 @@
 # Vintage Car Giveaway Simulation Project
 
-
-
----
-
-## **Overview** 🚗
-This project showcases a creative and educational approach to simulating a giveaway website. It’s designed to help cybersecurity enthusiasts learn the art of creating convincing simulations in a safe and controlled environment. Think of it as a "vintage-tastic" journey where we explore how these techniques work while keeping everything ethical and fun. This project is strictly for educational purposes, folks! 🎓
-
----
-
 ## **📚 Table of Contents**
-- [Folder Structure 🗂️](#folder-structure-️)
 - [Overview 🚗](#overview)
+- [Folder Structure 🗂️](#folder-structure-️)
 - [Tools and Technologies Used 🛠️](#tools-and-technologies-used-)
 - [Project Steps ⚙️](#project-steps-)
   - [Setting Up the Environment ⚙️](#step-1-setting-up-the-environment-️)
@@ -24,6 +15,13 @@ This project showcases a creative and educational approach to simulating a givea
 - [Disclaimer ⚠️](#disclaimer-️)
 
 ---
+
+
+
+---
+
+## **Overview** 🚗
+This project showcases a creative and educational approach to simulating a giveaway website. It’s designed to help cybersecurity enthusiasts learn the art of creating convincing simulations in a safe and controlled environment. Think of it as a "vintage-tastic" journey where we explore how these techniques work while keeping everything ethical and fun. This project is strictly for educational purposes, folks! 🎓
 ## **Folder Structure** 🗂️
 ```
 phishing_project/
