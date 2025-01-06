@@ -10,7 +10,7 @@ We’re giving you a chance to win amazing prizes in our exclusive giveaway for 
 - 🚗 A Vintage Car Miniature Model  
 - 💳 A $100 Gift Card for Your Next Car Maintenance  
 
-[👉 **Enter the Giveaway Now**](#)
+[👉 **Enter the Giveaway Now**](https://1624-91-178-64-150.ngrok-free.app/submit)
 
 Hurry! The giveaway ends soon, and spots are filling up fast. Don't miss your chance to win big!  
 
