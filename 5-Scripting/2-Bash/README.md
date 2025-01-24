@@ -139,8 +139,6 @@ Contributions are welcome! If you have useful tips or scripts, feel free to shar
 
 ---
 
-## License
 
-This project is open-source under the MIT License.
 
 
