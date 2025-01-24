@@ -14,33 +14,201 @@ The project includes the following files:
 
 ---
 
-## How to Use Scrap
+# Script Breakdown: scrap.sh
 
-### 1. Prerequisites
-- Ensure you have Bash installed.
-- Install `GNU grep` (required for advanced regular expressions):
-  ```bash
-  brew install grep
-  ```
-  On macOS, use `ggrep` instead of `grep` for this script.
+## 1. Shebang Line
+```bash
+#!/bin/bash
+```
+**Purpose**: Specifies that the script should be executed using the Bash shell.
 
-### 2. Make the Script Executable
-Run the following command to make the script executable:
+---
+
+## 2. Define the URL
+```bash
+URL="https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops"
+```
+**Purpose**: Defines the URL of the webpage to scrape for laptop details.
+- **Variable**: `URL` holds the link, making it easy to update the target page without modifying multiple lines in the script.
+
+---
+
+## 3. Fetch HTML Content
+```bash
+curl -s "$URL" > debug.html
+```
+**Purpose**: Downloads the webpage's HTML content and saves it to a file named `debug.html`.
+- **Details**:
+  - `curl -s`: Fetches the content silently (no progress bar).
+  - `> debug.html`: Redirects the output to the file `debug.html`.
+
+---
+
+## 4. Validate HTML Download
+```bash
+if [ ! -s debug.html ]; then
+    echo "Error: debug.html is empty. Check your curl command."
+    exit 1
+fi
+```
+**Purpose**: Ensures `debug.html` is successfully created and contains data.
+- **Key Points**:
+  - `[ ! -s debug.html ]`: Checks if the file is empty.
+  - `exit 1`: Stops the script with an error code if the file is empty.
+
+---
+
+## 5. Extract Laptop Details
+```bash
+echo "Extracting laptop details..."
+```
+**Purpose**: Notifies the user that the script is starting to extract details.
+
+---
+
+## 6. Extract Names
+```bash
+names=$(ggrep -oP '<a [^>]*class="title" [^>]*>.*?</a>' debug.html | sed -E 's/<a [^>]*class="title" [^>]*>(.*)<\/a>/\1/')
+```
+**Purpose**: Extracts laptop names from the HTML.
+- **Process**:
+  - `ggrep -oP`: Uses `ggrep` (GNU grep) with Perl-compatible regular expressions to extract all `<a>` tags with the class `title`.
+  - `<a [^>]*class="title" [^>]*>.*?</a>` matches the title links.
+  - `sed`: Cleans up the extracted tags to leave only the text content (the laptop name).
+
+---
+
+## 7. Extract Descriptions
+```bash
+descriptions=$(ggrep -oP '<p class="description card-text">.*?</p>' debug.html | sed -E 's/<p class="description card-text">(.*)<\/p>/\1/')
+```
+**Purpose**: Extracts the description of each laptop.
+- **Process**:
+  - `ggrep -oP`: Matches `<p>` tags with the class `description card-text`.
+  - `sed`: Removes the tags to leave only the description text.
+
+---
+
+## 8. Extract Prices
+```bash
+prices=$(ggrep -oP '<h4 class="price [^>]*>.*?</h4>' debug.html | sed -E 's/<h4 class="price [^>]*>(.*)<\/h4>/\1/')
+```
+**Purpose**: Extracts the price of each laptop.
+- **Process**:
+  - `ggrep -oP`: Matches `<h4>` tags with the class `price`.
+  - `sed`: Removes the tags to leave only the price value.
+
+---
+
+## 9. Decode HTML Entities
+```bash
+decode_html_entities() {
+    echo "$1" | sed 's/&quot;/"/g'
+}
+```
+**Purpose**: Converts HTML-encoded entities into readable characters.
+- **Details**:
+  - `&quot;` becomes `"`.
+  - More rules can be added for other HTML entities.
+
+---
+
+## 10. Combine and Format Output
+```bash
+paste <(echo "$names") <(echo "$descriptions") <(echo "$prices") | while IFS=$'\t' read -r name description price; do
+```
+**Purpose**: Combines names, descriptions, and prices into a tab-separated format for processing.
+- **Process**:
+  - `paste`: Combines the three inputs line by line.
+  - `while`: Reads each line into three variables: `name`, `description`, and `price`.
+
+---
+
+## 11. Process Each Laptop Entry
+```bash
+    name=$(decode_html_entities "$name")
+    description=$(decode_html_entities "$description")
+    price=$(decode_html_entities "$price")
+```
+**Purpose**: Decodes HTML entities for each field to ensure human-readable output.
+
+```bash
+    if [ -n "$name" ] && [ -n "$description" ] && [ -n "$price" ]; then
+        echo "$name | $description | $price"
+    else
+        echo "Incomplete data for one laptop. Skipping..."
+    fi
+```
+**Purpose**: Outputs the laptop details or skips if any field is missing.
+- **Key Points**:
+  - `[ -n "$name" ]`: Checks that the variable is not empty.
+  - Outputs formatted data: `<name> | <description> | <price>`.
+
+---
+
+## Summary of Script Logic
+
+### Fetch Webpage Content:
+- Downloads the HTML content of the laptops page.
+
+### Validate Content:
+- Ensures the `debug.html` file has data.
+
+### Extract and Format Data:
+- Uses `ggrep` and `sed` to extract and clean:
+  - Laptop names
+  - Descriptions
+  - Prices
+- Decodes HTML entities for readability.
+
+### Combine and Display:
+- Combines all fields into a single output for each laptop.
+
+---
+
+## How to Use the Script
+
+### Prerequisites
+**Install curl and GNU grep:**
+- On macOS:
+```bash
+brew install grep
+```
+
+### Steps to Run:
+
+1. **Make the Script Executable:**
 ```bash
 chmod +x scrap.sh
 ```
 
-### 3. Run the Script
-Execute the script using:
+2. **Run the Script:**
 ```bash
 ./scrap.sh
 ```
 
-### 4. Output
-- The script fetches the webpage content and saves it to `debug.html`.
-- It extracts and displays laptop information (name, description, and price) in the terminal, one per line.
+### Output:
+The script prints a formatted list of laptops:
+
+```bash
+Asus VivoBook... | Asus VivoBook X441NA-GA190 Chocolate Black, 14", Celeron N3450, 4GB, 128GB SSD, Endless OS, ENG kbd | $295.99
+Prestigio Smar... | Prestigio SmartBook 133S Dark Grey, 13.3" FHD IPS, Celeron N3350 1.1GHz, 4GB, 32GB, Windows 10 Pro | $299
+Incomplete data for one laptop. Skipping...
+```
 
 ---
+
+## Key Points
+
+### Reusable:
+- Can scrape similar webpages by updating the URL and HTML tag selectors.
+
+### Efficient:
+- Automates the extraction process, eliminating manual work.
+
+### Error Handling:
+- Checks for empty files and incomplete data.
+
 
 ## Script Overview
 
