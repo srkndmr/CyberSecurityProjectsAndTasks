@@ -5,7 +5,7 @@ Scrap is a Bash-based script designed to extract specific information from a web
 
 ---
 
-## Project Structure
+# Project Structure
 
 The project includes the following files:
 
@@ -14,7 +14,7 @@ The project includes the following files:
 
 ---
 
-## Script Breakdown: scrap.sh
+# Script Breakdown: scrap.sh
 
 ## 1. Shebang Line
 ```bash
