@@ -1,118 +1,94 @@
 # Friend Bot
 
-Friend Bot is a Bash-based interactive script that entertains users with jokes, performs calculations, and provides the current time.
+**Friend Bot** is an interactive Bash script that acts as a friendly chatbot. It can tell jokes, provide the current time, calculate basic mathematical expressions, and display a help menu.
+
+---
 
 ## Project Structure
 
-The project consists of the following two files:
+The project includes the following files:
 
-1. **`friend.sh`**: The primary script that handles user interactions and commands.
-2. **`jokes.txt`**: A text file containing jokes, with one joke per line.
-
----
-
-## How to Use Friend Bot
-
-### 1. Prerequisites
-   - Ensure you have Bash installed (most Unix-based systems come with it pre-installed).
-   - Place both `friend.sh` and `jokes.txt` in the same directory.
-
-### 2. Make the Script Executable
-   Run the following command to make the script executable:
-   ```bash
-   chmod +x friend.sh
-   ```
-
-### 3. Run the Script
-   Start the bot with:
-   ```bash
-   ./friend.sh
-   ```
-
-### 4. Interactive Commands
-   While the script is running, you can use the following commands:
-
-   - **`tell me a joke`**: Retrieves a random joke from `jokes.txt`.
-   - **`what's the time`**: Displays the current date and time.
-   - **Math Expression**: Enter a simple equation like `4 + 5` to calculate it.
-   - **`help`**: Shows a list of commands the bot can process.
-   - **`exit`**: Exits the program with a goodbye message.
+1. **`friend.sh`**: The primary script that defines the chatbot functionality.
+2. **`jokes.txt`**: A text file containing a list of jokes used by the script.
 
 ---
 
-## Script Overview
+## Script Breakdown: `friend.sh`
 
-### 1. **Initialization**
-The script begins by checking for the presence of `jokes.txt`. If the file is missing, it exits with an error message. This ensures the bot's functionality remains intact.
-
-### 2. **Core Functions**
-
-- **Joke Teller (`tell_joke`)**:
-  - Checks if `jokes.txt` exists and contains jokes.
-  - Selects a random joke using the `grep` and `sed` commands.
-
-- **Time Teller (`tell_time`)**:
-  - Displays the current system date and time using the `date` command.
-
-- **Calculator (`calculate`)**:
-  - Evaluates simple mathematical expressions using `awk` and `bc`.
-
-- **Help Display (`show_help`)**:
-  - Lists all available commands and their descriptions.
-
-### 3. **Interactive Mode**
-The bot runs an infinite loop to listen for user inputs. Based on the input, it calls the corresponding function or performs error handling for unrecognized commands.
-
-### 4. **Non-Interactive Mode**
-The script can also process a single command passed as an argument (e.g., `./friend.sh joke`).
-
----
-
-## Script File: `friend.sh`
-
+### 1. Shebang Line
 ```bash
 #!/bin/bash
+```
+- Specifies that the script should be executed using the Bash shell.
 
-# File containing jokes
+---
+
+### 2. Define the Jokes File
+```bash
 JOKES_FILE="jokes.txt"
+```
+- Defines the path to the `jokes.txt` file containing the jokes.
+- Makes it easy to update the jokes file path without modifying multiple parts of the script.
 
-# Check if the jokes file exists
+---
+
+### 3. Validate Jokes File
+```bash
 if [ ! -f "$JOKES_FILE" ]; then
     echo "Error: Jokes file ($JOKES_FILE) not found. Please create it with some jokes."
     exit 1
 fi
+```
+- **Purpose**: Ensures the `jokes.txt` file exists before proceeding.
+- **Details**:
+  - `[ ! -f "$JOKES_FILE" ]`: Checks if the file does not exist.
+  - `exit 1`: Exits the script with an error code if the file is missing.
 
-# Function to tell a random joke
+---
+
+### 4. Define Functions
+
+#### a. **Tell a Joke**
+```bash
 tell_joke() {
-    # Count the number of jokes in the file (ignoring empty lines)
     local num_jokes=$(grep -cve '^\s*$' "$JOKES_FILE")
-    
-    # Check if the file is empty
     if [ "$num_jokes" -eq 0 ]; then
         echo "Oops! It seems the jokes file is empty or has only blank lines."
         return
     fi
-
-    # Generate a random line number and fetch the joke
     local random_line=$(( (RANDOM % num_jokes) + 1 ))
     local joke=$(grep -ve '^\s*$' "$JOKES_FILE" | sed -n "${random_line}p")
-
-    # Check if a joke was retrieved successfully
     if [ -n "$joke" ]; then
         echo "Here's a joke for you: $joke"
     else
         echo "Oops! I couldn't fetch a joke. Please check the jokes file."
     fi
 }
+```
+- **Purpose**: Selects and prints a random joke from the `jokes.txt` file.
+- **Process**:
+  1. Counts the jokes, ignoring empty lines.
+  2. Generates a random number between 1 and the number of jokes.
+  3. Fetches the joke corresponding to the random number.
+  4. Outputs the joke or an error message if no joke is found.
 
-# Function to tell the current time
+---
+
+#### b. **Tell the Current Time**
+```bash
 tell_time() {
     echo "The current date and time is: $(date)"
 }
+```
+- **Purpose**: Displays the current system date and time.
+- **Details**:
+  - `$(date)`: Executes the `date` command to fetch the current time.
 
-# Function to calculate a simple equation
+---
+
+#### c. **Calculate an Expression**
+```bash
 calculate() {
-    # Validate input and calculate using awk
     if echo "$1" | awk '/^[0-9.\+\-\*\/() ]+$/ { exit 0 } { exit 1 }'; then
         local result=$(echo "$1" | bc -l 2>/dev/null)
         if [ -n "$result" ]; then
@@ -124,8 +100,16 @@ calculate() {
         echo "I couldn't calculate that. Please try a simple equation like '4 + 5'."
     fi
 }
+```
+- **Purpose**: Evaluates a simple mathematical expression and outputs the result.
+- **Details**:
+  - Validates the input using `awk`.
+  - Uses `bc -l` for precise calculations.
 
-# Function to display help
+---
+
+#### d. **Display Help**
+```bash
 show_help() {
     echo "I can do the following:"
     echo "- Type 'tell me a joke' to hear a joke."
@@ -133,8 +117,13 @@ show_help() {
     echo "- Enter a simple math expression like '4 + 5' to calculate it."
     echo "- Type 'exit' to leave."
 }
+```
+- **Purpose**: Displays a list of available commands.
 
-# Interactive mode
+---
+
+### 5. Interactive Mode
+```bash
 interactive_mode() {
     echo "Hi, I'm your friend! Type 'help' to see what I can do, or 'exit' to leave."
     while true; do
@@ -154,14 +143,22 @@ interactive_mode() {
                 break
                 ;;
             *)
-                # Try to calculate if input looks like a math expression
                 calculate "$input"
                 ;;
         esac
     done
 }
+```
+- **Purpose**: Engages the user in an interactive session.
+- **Process**:
+  1. Prompts the user for input.
+  2. Matches input against predefined commands.
+  3. Calls the appropriate function or attempts to calculate a math expression.
 
-# Non-interactive mode
+---
+
+### 6. Non-Interactive Mode
+```bash
 non_interactive_mode() {
     case "$1" in
         "joke")
@@ -174,56 +171,99 @@ non_interactive_mode() {
             show_help
             ;;
         *)
-            # Assume the input is a mathematical expression
             calculate "$1"
             ;;
     esac
 }
+```
+- **Purpose**: Handles single commands passed as arguments to the script.
+- **Examples**:
+  - `./friend.sh joke` tells a joke.
+  - `./friend.sh "4 + 5"` calculates the result.
 
-# Main script logic
+---
+
+### 7. Main Logic
+```bash
 if [ -t 0 ]; then
-    # Interactive mode
     interactive_mode
 else
-    # Non-interactive mode
     non_interactive_mode "$@"
 fi
 ```
+- **Purpose**: Determines whether the script runs in interactive or non-interactive mode.
+- **Details**:
+  - `[ -t 0 ]`: Checks if the script is running in a terminal (interactive mode).
+  - Otherwise, it processes command-line arguments.
+
+---
+
+## How to Use Friend Bot
+
+### 1. Prerequisites
+- A `jokes.txt` file containing jokes (one per line).
+
+### 2. Make the Script Executable
+```bash
+chmod +x friend.sh
+```
+
+### 3. Run the Script
+
+#### Interactive Mode
+```bash
+./friend.sh
+```
+- Engage with the bot directly in the terminal.
+
+#### Non-Interactive Mode
+```bash
+./friend.sh <command>
+```
+- Example:
+  - `./friend.sh joke`
+  - `./friend.sh "4 + 5"`
 
 ---
 
 ## Example Interaction
 
+### Interactive Mode
 ```bash
 $ ./friend.sh
 Hi, I'm your friend! Type 'help' to see what I can do, or 'exit' to leave.
+You: tell me a joke
+Here's a joke for you: Why don’t eggs tell jokes? They’d crack each other up.
+You: what's the time
+The current date and time is: Thu Jan 25 10:25:14 UTC 2025
 You: help
 I can do the following:
 - Type 'tell me a joke' to hear a joke.
 - Type 'what's the time' to see the current time.
 - Enter a simple math expression like '4 + 5' to calculate it.
 - Type 'exit' to leave.
-You: tell me a joke
-Here's a joke for you: Why don’t eggs tell jokes? They’d crack each other up.
-You: what's the time
-The current date and time is: Fri Jan 24 15:32:45 UTC 2025
-You: 10 / 2
-The result of 10 / 2 is: 5
 You: exit
 Goodbye!
+```
+
+### Non-Interactive Mode
+```bash
+$ ./friend.sh joke
+Here's a joke for you: Why was the computer cold? It left its Windows open!
+
+$ ./friend.sh "4 * 7"
+The result of 4 * 7 is: 28
 ```
 
 ---
 
 ## Notes
 
-- **File Requirements**:
-  - Ensure `jokes.txt` exists in the same directory as `friend.sh`.
-  - `jokes.txt` should have at least one joke; each joke should occupy a separate line.
+1. **Dependencies**:
+   - No additional dependencies are required.
+2. **Error Handling**:
+   - Ensures the `jokes.txt` file exists.
+   - Validates mathematical expressions before attempting calculations.
 
-- **Error Handling**:
-  - If `jokes.txt` is missing, the bot exits with an error.
-  - Invalid commands prompt the user to try again or enter `help` for guidance.
-
-
+---
 
