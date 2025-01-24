@@ -260,19 +260,6 @@ done
 
 ---
 
-## Example Interaction
-
-### Script Execution
-```bash
-$ ./scrap.sh
-Extracting laptop details...
-Asus VivoBook... | Asus VivoBook X441NA-GA190 Chocolate Black, 14", Celeron N3450, 4GB, 128GB SSD, Endless OS, ENG kbd | $295.99
-Prestigio Smar... | Prestigio SmartBook 133S Dark Grey, 13.3" FHD IPS, Celeron N3350 1.1GHz, 4GB, 32GB, Windows 10 Pro + Office 365 1 gadam | $299
-Acer Aspire ES... | Acer Aspire ES1-572 Black, 15.6" HD, Core i3-6006U, 4GB, 128GB SSD, Linux | $379.95
-```
-
----
-
 
 ```
 
