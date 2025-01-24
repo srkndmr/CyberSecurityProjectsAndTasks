@@ -256,7 +256,7 @@ paste <(echo "$names") <(echo "$descriptions") <(echo "$prices") | while IFS=$'\
     fi
 
 done
-```
+
 
 ---
 
