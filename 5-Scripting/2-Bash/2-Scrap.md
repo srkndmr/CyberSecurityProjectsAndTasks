@@ -273,22 +273,6 @@ Acer Aspire ES... | Acer Aspire ES1-572 Black, 15.6" HD, Core i3-6006U, 4GB, 128
 
 ---
 
-## Notes
-
-1. **Dependencies**:
-   - `curl`: Fetches webpage content.
-   - `ggrep`: Parses HTML using Perl-compatible regular expressions.
-   - `sed`: Extracts specific lines.
-
-2. **File Requirements**:
-   - The `debug.html` file will be overwritten each time the script runs.
-
-3. **Error Handling**:
-   - If `curl` fails to fetch the content, the script notifies the user.
-   - If no laptop data is found, it suggests checking the webpage structure.
-
----
-
 
 ```
 
