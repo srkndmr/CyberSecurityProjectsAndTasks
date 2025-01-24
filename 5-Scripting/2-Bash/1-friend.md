@@ -1,4 +1,3 @@
-
 # Friend Bot
 
 Friend Bot is a Bash-based interactive script that entertains users with jokes, performs calculations, and provides the current time.
@@ -69,6 +68,130 @@ The script can also process a single command passed as an argument (e.g., `./fri
 
 ---
 
+## Script File: `friend.sh`
+
+```bash
+#!/bin/bash
+
+# File containing jokes
+JOKES_FILE="jokes.txt"
+
+# Check if the jokes file exists
+if [ ! -f "$JOKES_FILE" ]; then
+    echo "Error: Jokes file ($JOKES_FILE) not found. Please create it with some jokes."
+    exit 1
+fi
+
+# Function to tell a random joke
+tell_joke() {
+    # Count the number of jokes in the file (ignoring empty lines)
+    local num_jokes=$(grep -cve '^\s*$' "$JOKES_FILE")
+    
+    # Check if the file is empty
+    if [ "$num_jokes" -eq 0 ]; then
+        echo "Oops! It seems the jokes file is empty or has only blank lines."
+        return
+    fi
+
+    # Generate a random line number and fetch the joke
+    local random_line=$(( (RANDOM % num_jokes) + 1 ))
+    local joke=$(grep -ve '^\s*$' "$JOKES_FILE" | sed -n "${random_line}p")
+
+    # Check if a joke was retrieved successfully
+    if [ -n "$joke" ]; then
+        echo "Here's a joke for you: $joke"
+    else
+        echo "Oops! I couldn't fetch a joke. Please check the jokes file."
+    fi
+}
+
+# Function to tell the current time
+tell_time() {
+    echo "The current date and time is: $(date)"
+}
+
+# Function to calculate a simple equation
+calculate() {
+    # Validate input and calculate using awk
+    if echo "$1" | awk '/^[0-9.\+\-\*\/() ]+$/ { exit 0 } { exit 1 }'; then
+        local result=$(echo "$1" | bc -l 2>/dev/null)
+        if [ -n "$result" ]; then
+            echo "The result of $1 is: $result"
+        else
+            echo "I couldn't calculate that. Please try a simple equation like '4 + 5'."
+        fi
+    else
+        echo "I couldn't calculate that. Please try a simple equation like '4 + 5'."
+    fi
+}
+
+# Function to display help
+show_help() {
+    echo "I can do the following:"
+    echo "- Type 'tell me a joke' to hear a joke."
+    echo "- Type 'what's the time' to see the current time."
+    echo "- Enter a simple math expression like '4 + 5' to calculate it."
+    echo "- Type 'exit' to leave."
+}
+
+# Interactive mode
+interactive_mode() {
+    echo "Hi, I'm your friend! Type 'help' to see what I can do, or 'exit' to leave."
+    while true; do
+        read -p "You: " input
+        case "$input" in
+            "tell me a joke")
+                tell_joke
+                ;;
+            "what's the time")
+                tell_time
+                ;;
+            "help")
+                show_help
+                ;;
+            "exit")
+                echo "Goodbye!"
+                break
+                ;;
+            *)
+                # Try to calculate if input looks like a math expression
+                calculate "$input"
+                ;;
+        esac
+    done
+}
+
+# Non-interactive mode
+non_interactive_mode() {
+    case "$1" in
+        "joke")
+            tell_joke
+            ;;
+        "time")
+            tell_time
+            ;;
+        "help")
+            show_help
+            ;;
+        *)
+            # Assume the input is a mathematical expression
+            calculate "$1"
+            ;;
+    esac
+}
+
+# Main script logic
+if [ -t 0 ]; then
+    # Interactive mode
+    interactive_mode
+else
+    # Non-interactive mode
+    non_interactive_mode "$@"
+fi
+```
+
+---
+
 ## Example Interaction
 
 ```bash
@@ -102,9 +225,5 @@ Goodbye!
   - If `jokes.txt` is missing, the bot exits with an error.
   - Invalid commands prompt the user to try again or enter `help` for guidance.
 
----
 
-## License
-
-Friend Bot is free to use and share. Modify it to add your personalized features or jokes!
 
