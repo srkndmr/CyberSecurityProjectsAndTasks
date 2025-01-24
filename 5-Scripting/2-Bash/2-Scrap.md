@@ -14,7 +14,7 @@ The project includes the following files:
 
 ---
 
-# Script Breakdown: scrap.sh
+## Script Breakdown: scrap.sh
 
 ## 1. Shebang Line
 ```bash
