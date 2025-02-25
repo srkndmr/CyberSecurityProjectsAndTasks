@@ -1,4 +1,5 @@
 # 🚩 Analysis of the Event Log (Mimikatz LSASS Access Attempt)
+![Screenshot 2025-02-25 at 15 46 06](https://github.com/user-attachments/assets/29497640-aa16-4e38-97f0-1fb1ec82cd41)
 
 This event log clearly shows a typical Mimikatz attack attempt on the LSASS process. Here's a breakdown of the key details from your screenshot:
 
